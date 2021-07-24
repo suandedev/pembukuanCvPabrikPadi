@@ -12,7 +12,6 @@
 	},
 	"require": {
 		"php": ">=5.4",
-		"chriskacerguis/codeigniter-restserver": "^3.1",
 		"guzzlehttp/guzzle": "^7.3"
 	},
 	"suggest": {

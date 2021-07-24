@@ -11,7 +11,7 @@ class User extends RestController
 		// Construct the parent class
 		parent::__construct();
 		$this->load->model('Catatan_model', 'catatan');
-//		$this->methods['index_get']['limit'] = 20;
+		$this->methods['index_get']['limit'] = 1000;
 	}
 
 	public function index_get()
@@ -68,7 +68,8 @@ class User extends RestController
 		$data = [
 			'hasil_pekerjaan' => $this->post('hasil_pekerjaan'),
 			'tanggal' => $this->post('tanggal'),
-			'kategori' => $this->post('kategori')
+			'kategori' => $this->post('kategori'),
+			'karyawan' => $this->post('karyawan'),
 		];
 
 		if ($this->catatan->createCatatanHarian($data) > 0) {
@@ -92,9 +93,10 @@ class User extends RestController
 		$data = [
 			'hasil_pekerjaan' => $this->put('hasil_pekerjaan'),
 			'tanggal' => $this->put('tanggal'),
-			'kategori' => $this->put('kategori')
+			'kategori' => $this->put('kategori'),
+			'karyawan' => $this->put('karyawan'),
 		];
-		
+
 		if ($this->catatan->updateCatatanHarian($data, $id) > 0) {
 			//ok
 			$this->response( [

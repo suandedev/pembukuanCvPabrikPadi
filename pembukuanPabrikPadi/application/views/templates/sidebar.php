@@ -6,7 +6,7 @@
 	<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 		<!-- Sidebar - Brand -->
-		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('home') ?>">
 			<div class="sidebar-brand-icon rotate-n-15">
 				<img width="50px" src="<?= base_url('assets/')?>img/padi.png">
 			</div>
@@ -18,13 +18,19 @@
 
 		<!-- Nav Item - Dashboard -->
 		<li class="nav-item">
-			<a class="nav-link" href="index.html">
+			<a class="nav-link" href="<?= base_url('home') ?>">
 				<i class="fas fa-fw fa-tachometer-alt"></i>
 				<span>Dashboard</span></a>
 		</li>
 
 		<!-- Divider -->
 		<hr class="sidebar-divider d-none d-md-block">
+
+		<li class="nav-item">
+			<a class="nav-link" href="<?= base_url('home/totalan') ?>">
+				<i class="fas fa-a fa-calculator"></i>
+				<span>Totalan</span></a>
+		</li>
 
 		<!-- Sidebar Toggler (Sidebar) -->
 		<div class="text-center d-none d-md-inline">
